@@ -133,6 +133,8 @@ module "windowsservers" {
   license_type        = var.license_type
   identity_type       = "UserAssigned"
   identity_ids        = [azurerm_user_assigned_identity.test.id]
+
+  //test eyal//
   os_profile_secrets = [{
     source_vault_id   = azurerm_key_vault.test.id
     certificate_url   = azurerm_key_vault_certificate.test.secret_id
